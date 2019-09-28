@@ -12,19 +12,24 @@
   margin: 1em;
 }
 
-.one {
+#one {
   background: rgb(220, 0, 0);
   border-radius: 50%;
 }
 
-.two {
+#two {
   background: rgb(0, 220, 0);
-  opacity: 0.35;
+  opacity: 0.25;
+  animation: rotate infinite 2s ease;
 }
 
-.three {
+#three {
   background: rgb(0, 0, 220);
-  animation: rotate infinite 2s ease;
+  transition: all 0.5s ease;
+}
+
+#three:hover {
+  transform: scale(1.2);
 }
 
 @keyframes rotate {
