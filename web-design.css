@@ -1,6 +1,11 @@
 #container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   margin: 0.5em;
   width: 500px;
   height: 500px;
@@ -20,23 +25,39 @@
 #two {
   background: rgb(0, 220, 0);
   opacity: 0.25;
-  animation: rotate infinite 2s ease;
+  -webkit-animation: rotate infinite 2s ease;
+          animation: rotate infinite 2s ease;
 }
 
 #three {
   background: rgb(0, 0, 220);
+  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
 #three:hover {
-  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
 }
 
 @keyframes rotate {
   0% {
-    transform: rotate(0);
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
   }
   100% {
-    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
   }
 }
