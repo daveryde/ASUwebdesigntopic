@@ -1,0 +1,37 @@
+#container {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0.5em;
+  width: 500px;
+  height: 500px;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  margin: 1em;
+}
+
+.one {
+  background: rgb(220, 0, 0);
+  border-radius: 50%;
+}
+
+.two {
+  background: rgb(0, 220, 0);
+  opacity: 0.35;
+}
+
+.three {
+  background: rgb(0, 0, 220);
+  animation: rotate infinite 2s ease;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
